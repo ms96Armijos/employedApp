@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),url('./assets//fondo.png');
+    /*background-image: url('./assets//fondo.png');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /*background: #3E5151;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #DECBA4, #3E5151); 
+    background: linear-gradient(to right, #DECBA4, #3E5151); */
+
+}
