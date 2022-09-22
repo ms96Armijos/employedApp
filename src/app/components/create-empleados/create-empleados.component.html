@@ -4,26 +4,27 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h3>Crear Empleado</h3>
-                    <form class="mt-4">
+                    <span *ngIf="submitted && createEmpleado.invalid" class="badge bg-danger">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form class="mt-4" [formGroup] = "createEmpleado" (ngSubmit) = "agregarEmpleado()">
 
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="Nombre">
+                                <input type="text" class="form-control form-control-lg" formControlName = "nombre" placeholder="Nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="Apellido">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control form-control-lg mt-3" placeholder="Documento">
+                                <input type="text" class="form-control form-control-lg" formControlName = "apellido" placeholder="Apellido">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control form-control-lg mt-3" placeholder="Salario">
+                                <input type="text" class="form-control form-control-lg mt-3" formControlName = "documento" placeholder="Documento">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control form-control-lg mt-3" formControlName = "salario" placeholder="Salario">
                             </div>
                         </div>
 
